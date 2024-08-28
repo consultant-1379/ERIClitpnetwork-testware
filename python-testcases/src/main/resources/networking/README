@@ -1,0 +1,1168 @@
+######################################################################
+STORY 7403
+######################################################################
+
+TEST: test_01_p_add_existing_nic_to_bond_check_routing_config
+
+DESCRIPTION: Add an existing network interface to a newly created bond and
+            check the routing table, configuration file and task list
+            No route tasks are performed. Ticket was raised, see:
+            LITPCDS-7403 Plan has no task to update route when I add an
+            existing nic interface to a bond
+
+REASON OBSOLETED: Test had tag pre-reg so was not included in KGB
+
+GERRIT LINK: https://gerrit.ericsson.se/3895224
+
+TMS ID: litpcds_7403_tc01
+
+######################################################################
+STORY 159927
+######################################################################
+
+TEST: test_01_p_update_subnet_with_bond_and_bridges
+
+DESCRIPTION: Test to verify that a user can update the subnet of a network
+             while said network is configured with multiple eths and bridged
+             with bonds
+
+REASON OBSOLETED: Test was marked as expansion but never run as no network
+                  expansion KGB. Expansion was not relevent to the test and
+                  All functionality is already covered by
+                  test_10_p_updte_subnet_netwrk_confd_bridged_bonds_mult_eths.
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4271214/
+
+TMS ID: story159927_tc01
+
+######################################################################
+STORY 13259
+######################################################################
+
+TEST: test_02_p_update_bond_valid_arp_props
+
+DESCRIPTION: Validate that an applied bond can be updated with
+             valid arp properties.
+
+REASON OBSOLETED: Test merged with
+                  test_01_p_create_update_bond_valid_arp_miimon_props.
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4445139/
+
+TMS ID: litpcds_13259_tc02
+
+-----------------------------------------------------------------------
+TEST: test_03_p_chk_no_default
+
+DESCRIPTION: Validate that arp properties can be removed from an
+             applied bond and that the bond is set with neither
+             miimon nor arp
+
+REASON OBSOLETED: Test merged with
+                  test_01_p_create_update_bond_valid_arp_miimon_props.
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4445139/
+
+TMS ID: litpcds_13259_tc03
+
+-----------------------------------------------------------------------
+TEST: test_04_p_replace_arp_with_miimon
+
+DESCRIPTION: Validate that a bond can be update to use miimon
+             instead of arp.
+
+REASON OBSOLETED: Test merged with
+                  test_01_p_create_update_bond_valid_arp_miimon_props.
+
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4445139/
+
+TMS ID: litpcds_13259_tc04
+
+-----------------------------------------------------------------------
+
+TEST: test_05_p_replace_miimon_with_arp
+
+DESCRIPTION: Validate that a bond can be updated to use arp
+             instead of miimon
+REASON OBSOLETED: Test merged with
+                  test_01_p_create_update_bond_valid_arp_miimon_props.
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4445139/
+
+TMS ID: litpcds_13259_tc05
+
+-----------------------------------------------------------------------
+
+TEST: test_06_p_update_bond_valid_arp_props_arp_all_targets_all
+
+DESCRIPTION: Validate that an applied bond can be updated with
+             valid arp properties when arp_all_targets remains set
+             to all.
+
+REASON OBSOLETED: Test merged with
+                  test_01_p_create_update_bond_valid_arp_miimon_props.
+
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4445139/
+
+TMS ID: litpcds_13259_tc06
+-----------------------------------------------------------------------
+
+######################################################################
+STORY 5175
+######################################################################
+
+TEST: test_09_n_multiple_default_gateway
+
+DESCRIPTION: Verify an error is thrown when the subnet property
+             value is duplicated across several routes
+
+REASON OBSOLETED: Converted to AT "test_09_n_multiple_default_gateway.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4709709/
+
+TMS ID: litpcds_5175_tc09
+
+-----------------------------------------------------------------------
+TEST: test_10_n_validate_gateway_not_in_network
+
+DESCRIPTION: Validate the subnet and Gateway properties
+            of the route6 item type
+
+REASON OBSOLETED: Converted to AT
+                  "test_10_n_validate_gateway_not_in_network.at" in
+                  network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4709709/
+
+TMS ID: litpcds_5175_tc10
+-----------------------------------------------------------------------
+TEST: test_12_n_create_duplicate_routes
+
+DESCRIPTION: Verify duplicate routes with the same subnet throws
+             an error at create plan
+
+REASON OBSOLETED: Covered in AT "test_09_n_multiple_default_gateway.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4709709/
+
+TMS ID: litpcds_5175_tc12
+-----------------------------------------------------------------------
+TEST: test_34_n_route6_with_independent_gw
+
+DESCRIPTION: Verify creating a route where none of the nodes
+             interfaces belong to the gateway network range results in an
+             error at create plan
+
+REASON OBSOLETED: Converted to AT "test_34_n_route6_with_independent_gw.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4709709/
+
+TMS ID: litpcds_5175_tc34
+-----------------------------------------------------------------------
+
+######################################################################
+STORY 56
+######################################################################
+
+TEST: test_02_p_gateway_is_accessible
+
+DESCRIPTION: Verify the default route on nodes and ms are pingable
+
+REASON OBSOLETED: Merged with test_01_p_default_route
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550515/
+
+TMS ID: litpcds_56_tc02
+
+-----------------------------------------------------------------------
+TEST: test_03_p_add_route_ms
+
+DESCRIPTION: Verify that the route item on ms created in C.I is
+             created and configured correctly
+
+REASON OBSOLETED: Already covered in test_01_p_default_route
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550515/
+
+TMS ID: litpcds_56_tc03
+
+-----------------------------------------------------------------------
+TEST: test_05_p_add_overlapping_route
+
+DESCRIPTION: Verify that a overlapping routes can be added
+             to the peer-nodes
+
+REASON OBSOLETED: Obsoleted prior to refactoring project
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550515/
+
+TMS ID: litpcds_56_tc05
+
+-----------------------------------------------------------------------
+TEST: test_07_n_removed_properties
+
+DESCRIPTION: Update in network item with invalid properties
+             results in a PropertyNotAllowedError
+
+REASON OBSOLETED: Covered in AT "validation/invalid_model_scenarios.at" in
+                  core
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550515/
+
+TMS ID: litpcds_56_tc07
+
+-----------------------------------------------------------------------
+TEST: test_08_n_no_gateway
+
+DESCRIPTION: This test ensures that default route is mandatory (0.0.0.0/0)
+             for every server.
+
+REASON OBSOLETED: Made obsolete because default route is not mandatory any
+                  more. LITPCDS-5228
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550515/
+
+-----------------------------------------------------------------------
+
+TEST: test_09_n_no_default_gateway
+
+DESCRIPTION: This test ensures that default route is mandatory (0.0.0.0/0)
+             for every server.
+
+REASON OBSOLETED: Made obsolete because default route is not mandatory any
+                  more. LITPCDS-5228
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550515/
+
+-----------------------------------------------------------------------
+TEST: test_10_n_multiple_default_gateway
+
+DESCRIPTION: Verify that default route is mandatory (0.0.0.0/0)
+             for every server and there is only one mandatory gateway is
+             defined.
+
+REASON OBSOLETED: Converted to AT "test_10_n_multiple_default_gateway.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550515/
+
+TMS ID: litpcds_56_tc10
+
+-----------------------------------------------------------------------
+TEST: test_11_n_gateway_not_in_network
+
+DESCRIPTION: Verify gateway not reachable when invalid gateway
+             property set.
+
+REASON OBSOLETED: Converted to AT "test_11_n_gateway_not_in_network.at" in
+                  network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550515/
+
+TMS ID: litpcds_56_tc11
+
+-----------------------------------------------------------------------
+TEST: test_12_n_add_default_route_duplicate_same_gw
+
+DESCRIPTION: Verify a user updated gateway IP will throw an error
+             when there is a conflict in property values.
+
+REASON OBSOLETED: Converted to AT
+                  "test_12_n_add_default_route_duplicate_same_gw.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550515/
+
+TMS ID: litpcds_56_tc12
+
+-----------------------------------------------------------------------
+TEST: test_13_n_add_default_route_duplicate_different_gw
+
+DESCRIPTION: Verify a user updated gateway IP will throw an error
+             when there is a conflict in property values.
+
+REASON OBSOLETED: Converted to AT
+                  "test_13_n_add_default_route_duplicate_different_gw.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550515/
+
+TMS ID: litpcds_56_tc13
+
+-----------------------------------------------------------------------
+TEST: test_14_n_add_route_duplicate
+
+DESCRIPTION: Verify a user updated gateway IP will throw an error
+             when there is a conflict in property values.
+
+REASON OBSOLETED: Converted to AT "test_14_n_add_route_duplicate.at" in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550515/
+
+TMS ID: litpcds_56_tc14
+
+-----------------------------------------------------------------------
+TEST: test_15_n_update_default_route_subnet
+
+DESCRIPTION: This test ensures that user can update gateway IP, and validate
+             catch if there is a conflict in default route property values
+
+REASON OBSOLETED:  Test has been made obsolete due to LITPCDS-5228
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550515/
+-----------------------------------------------------------------------
+TEST: test_16_n_update_route_subnet
+
+DESCRIPTION: This test ensures that user can update gateway IP,
+            and validate catch if there is a conflict in non-default route
+            property values.
+
+REASON OBSOLETED: Converted to AT "test_16_n_update_route_subnet.at" in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550515/
+
+TMS ID: litpcds_56_tc16
+
+-----------------------------------------------------------------------
+TEST: test_17_n_update_route_subnet_to_default
+
+DESCRIPTION: This test ensures that user can update subnet
+            property, and validate catches if there is more than one default
+            gateway
+
+REASON OBSOLETED: Converted to AT "test_17_n_update_route_subnet_to_default.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550515/
+
+TMS ID: litpcds_56_tc17
+
+-----------------------------------------------------------------------
+TEST: test_obsolete_18_n_redundant_route
+
+DESCRIPTION: Disallow new route to a subnet already rechable
+             through any interface.
+
+REASON OBSOLETED: Test had tag pre-reg so was not included in KGB
+
+GERRIT LINK: https://gerrit.ericsson.se/3895224
+
+TMS ID: N/A
+-----------------------------------------------------------------------
+######################################################################
+STORY 2072
+######################################################################
+
+TEST: test_01_p_create_vlan1_eth1_ms
+
+DESCRIPTION: Test vlan tagging on 1 network interface where vlan has IP address
+             z.z.z.z and interface has x.x.x.x
+
+REASON OBSOLETED: This test has been merged with TC05
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551072/
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_02_p_create_vlan1_eth1_no_ipaddress_mn
+
+DESCRIPTION: Test vlan tagging on 1 network interface where vlan has no
+             IP address (ipaddress is optional)
+
+REASON OBSOLETED: This test has been merged with TC06
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551072/
+
+TMS ID:
+
+-----------------------------------------------------------------------
+
+TEST: test_03_p_create_vlan2_eth2_diff_net_if
+
+DESCRIPTION: Test creating of 2 separate vlan tags on 2 different network
+             interfaces
+
+REASON OBSOLETED: This test was obsoleted prior to refactoring project
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551072/
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_05_p_update_vlan1_eth1
+
+DESCRIPTION: Verify creating and updateing vlans results in a
+             successful plan
+
+REASON OBSOLETED: Test converted to AT "test_05_p_update_vlan1_eth1.at" in
+                  network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551072/
+
+TMS ID: litpcds_2072_tc05
+
+-----------------------------------------------------------------------
+TEST: test_07_n_create_vlan1_bridge1_eth1
+
+DESCRIPTION: Test vlan tagging of 1 bridge interface on 1 network interface
+
+REASON OBSOLETED: This test is obsolete due to functionality delivered in
+                  LITPCDS-6629
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551072/
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_08_n_create_vlan1_eth1_bridge1_eth1
+
+DESCRIPTION: Test vlan tagging of the same network interface
+            what is already bridged
+
+REASON OBSOLETED: This test is obsolete due to functionality delivered in
+                  LITPCDS-6629
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551072/
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_09_n_create_vlan1_no_net_if
+
+DESCRIPTION: Verify creating a vlan with where an eth
+            doesn't exist results in a Validation Error
+
+REASON OBSOLETED: Test converted to AT "test_09_n_create_vlan1_no_net_if.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551072/
+
+TMS ID: litpcds_2072_tc09
+
+-----------------------------------------------------------------------
+TEST: test_14_n_duplicated_device_name_property
+
+DESCRIPTION: Verify creating a vlan with an invalid property
+            results in a PropertyNotAllowedError error
+
+REASON OBSOLETED: Test converted to AT
+                  "test_14_n_duplicated_device_name_property.at" in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551072/
+
+TMS ID: litpcds_2072_tc14
+
+-----------------------------------------------------------------------
+TEST: test_15_n_assign_mgmt_network_to_vlan
+
+DESCRIPTION: Test vlan with the network_name=mgmt property
+
+REASON OBSOLETED: After bug litpcds-5364 had been fixed this test case
+                  became invalid.
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551072/
+
+TMS ID:
+
+-----------------------------------------------------------------------
+
+TEST: test_16_n_validate_vlan_mgmt_network_nodes_only
+
+DESCRIPTION: Verify creating a vlan on the mgmt interface on the peer
+             nodes results in Validation Error at create plan.
+
+REASON OBSOLETED: Converted to AT
+                  "test_16_n_validate_vlan_mgmt_network_nodes_only.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551072/
+
+TMS ID: litpcds_2072_tc16
+
+-----------------------------------------------------------------------
+
+######################################################################
+STORY 91
+######################################################################
+
+TEST: test_01_n_invalid_node_level_network
+
+DESCRIPTION: Verify create plan fails when all required properties are not set
+
+REASON OBSOLETED: Converted to AT "test_01_n_invalid_node_level_network.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4538760/
+
+TMS ID: litpcds_91_tc01
+
+-----------------------------------------------------------------------
+
+TEST: test_02_n_invalid_interface
+
+DESCRIPTION: Verify errors are thrown when all required properties are not
+             set and/or invalid values are given.
+
+REASON OBSOLETED: Converted to AT "test_02_n_invalid_interface.at" in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4538760/
+
+TMS ID: litpcds_91_tc02
+
+-----------------------------------------------------------------------
+
+TEST: test_03_n_invalid_network
+
+DESCRIPTION: Verify errors are thrown when mandatory properties are not
+             set and/or invalid values are given.
+
+REASON OBSOLETED: Converted to AT "test_03_n_invalid_network.at" in network
+                  and networkapi
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4538760/
+
+TMS ID: litpcds_91_tc03
+-----------------------------------------------------------------------
+
+######################################################################
+STORY 6629
+######################################################################
+
+TEST: test_07_n_validate_invalid_combinations
+
+DESCRIPTION: Verify invalid property combinations results in a Validation
+             Error
+
+REASON OBSOLETED: Converted to "test_07_n_validate_invalid_combinations.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4538479/
+
+TMS ID: litpcds_6629_tc07
+
+-----------------------------------------------------------------------
+
+######################################################################
+STORY 690_835
+######################################################################
+
+TEST: test_01_p_add_network_ms
+
+DESCRIPTION:
+    This test creates a new network under the network profile of MS
+    attempts to assign a new ip to a free nic on a example node.
+    We want to test this is possible and does not affect other networks.
+
+REASON OBSOLETED: Merged prior to refactoring project
+
+GERRIT LINK:
+
+-----------------------------------------------------------------------
+TEST: test_02_p_add_network_node
+
+DESCRIPTION:
+    This test creates a new network under the network profile of a node
+    attempts to assign a new ip to a free nic on a example node.
+    We want to test this is possible and does not affect other networks.
+
+REASON OBSOLETED: Merged prior to refactoring project
+
+GERRIT LINK:
+
+-----------------------------------------------------------------------
+
+TEST: test_03_n_add_network_used_nic
+
+DESCRIPTION: Verify that create_plan produces a Validation Error if a
+             new nic is added with a device_name that is already used.
+
+REASON OBSOLETED: Converted to AT "test_03_duplicate_device_name.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4721686/
+
+TMS ID: litpcds_690_835_tc03
+
+-----------------------------------------------------------------------
+
+######################################################################
+STORY 392_835
+######################################################################
+
+TEST: test_01_p_update_ms_ip
+
+DESCRIPTION: Verify updating the ms ip results in a successful
+             create plan
+
+REASON OBSOLETED: Converted to AT "test_01_p_update_ms_ip.at" in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4722062/
+
+TMS ID: litpcds_392_835_tc01
+
+-----------------------------------------------------------------------
+TEST: dormant_02_p_update_mn_ips
+
+DESCRIPTION: Update IP of all managed nodes to a free + valid IP
+             for the network being used by the cluster and check
+             connectivity cluster wide. Reset IPs when done.
+
+REASON OBSOLETED: Out of date test as it hasn't been run in a long time.
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4722062/
+
+TMS ID:
+
+-----------------------------------------------------------------------
+
+TEST: test_03_n_update_ip_validation
+
+DESCRIPTION: Verify updating the ms with out of range/invalid
+             ip results in a validation error
+
+REASON OBSOLETED: Converted to AT "test_03_n_update_ip_validation.at" in
+                  network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4722062/
+
+TMS ID: litpcds_392_835_tc03
+
+-----------------------------------------------------------------------
+
+######################################################################
+STORY 2064
+######################################################################
+
+TEST: test_04_p_ipv6_to_ipv4_conversion
+
+DESCRIPTION: Creates an interface with ipv6 address only. Updates
+             the interface to use ipv4 address. Check that ifcfg files
+             are updated correctly. Checks that the address can be
+             pinged/ ssh into.
+
+REASON OBSOLETED: This test has been merged with TC03
+
+GERRIT LINK: Merged before refactor project
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_06_p_update_interface_ipv6_addr
+
+DESCRIPTION: Creates an interface with valid ipv4 and ipv6 addresses.
+             Updates the ipv6 value of the interface. Checks that the
+             ipv6 address can be pinged/ ssh into.
+             Check that ifcfg files are updated correctly.
+
+REASON OBSOLETED: This test has been merged with TC_01
+
+GERRIT LINK: Merged before refactor project
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_07_p_update_interface_ipv6_addr_only
+
+DESCRIPTION: Creates an interface with valid ipv6 addresses. Updates
+             the ipv6 value of the interface. Checks that the IPv6
+             address can be pinged/ ssh into.
+             Check that ifcfg files are updated correctly.
+
+REASON OBSOLETED: This test has been merged with TC03
+
+GERRIT LINK: Merged before refactor project
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_08_n_update_interface_ipv6_invalid_addr
+
+DESCRIPTION: Verify updating interface items ipv6 address
+             to invalid value results in a validation error
+
+REASON OBSOLETED: Test merged with
+        "test_01_n_create_update_valid_interface_non_mgmt_network"
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4552097/
+
+TMS ID: litpcds_2064_tc08
+
+-----------------------------------------------------------------------
+TEST: test_12_update_bridge_ipv6_addr
+
+DESCRIPTION: Creates a bridge with valid ipv6 and ipv4 addresses.
+             Updates the ipv6 value of the bridge. Checks the the
+             ipv6 address can be pinged/ ssh into.
+             Check that ifcfg files are updated correctly.
+
+REASON OBSOLETED: This test has been merged with TC09
+
+GERRIT LINK: Merged before refactor project
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_13_update_bridge_ipv6_addr_only
+
+DESCRIPTION: Creates a bridge with valid ipv6 address. Updates the
+             ipv6 value of the bridge. Checks that the IPv6 address
+             can be pinged/ssh into. Check that ifcfg files are
+             updated correctly.
+
+REASON OBSOLETED: This test has been merged with TC10
+
+GERRIT LINK: Merged before refactor project
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_14_n_update_bridge_invalid_ipv6_addr
+
+DESCRIPTION: Creates a bridge with valid ipv4 and ipv6 address.
+             Update the bridge with an invalid ipv6 address. Checks
+             that the correct error is thrown.
+
+REASON OBSOLETED: This TC has been merged with TC10
+
+GERRIT LINK: Merged before refactor project
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_19_p_update_vlan_ipv6_addr
+
+DESCRIPTION: Creates a vlan with valid ipv4 and ipv6 address. Updates
+             the ipv6 value of the bridge. Checks that the ipv6
+             address can be pinged/ ssh into. Check that ifcfg files
+             are updated correctly.
+
+REASON OBSOLETED: This test has been merged with TC15
+
+GERRIT LINK: Merged before refactor project
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_20_update_vlan_ipv6_addr_only
+
+DESCRIPTION: Creates vlan with valid ipv6 address. Updates the ipv6
+             value of the bridge. Checks that the ipv6 address can
+             be pinged/ssh into. Check that ifcfg files are updated
+             correctly.
+
+REASON OBSOLETED: This test has been merged with TC17
+
+GERRIT LINK: Merged before refactor project
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_21_n_update_vlan_invalid_ipv6_addr
+
+DESCRIPTION: Creates vlan with valid ipv4 and ipv6 address, then
+             updates vlan with an invalid ipv6 address. Checks correct
+             error thrown
+
+REASON OBSOLETED: This test has been merged with TC15
+
+GERRIT LINK: Merged before refactor project
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_22_n_validate_prefix
+
+DESCRIPTION: Verify a validation error is thrown when an invalid
+             value is given to ipv6 property of an eth item
+
+REASON OBSOLETED: Merged with test_24_n_validate_ipaddress_value
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4552097/
+
+TMS ID: litpcds_2064_tc22
+
+-----------------------------------------------------------------------
+TEST: test_23_n_validate_address_format
+
+DESCRIPTION: Verify a validation error is thrown when an invalid
+             value is given to ipv6 property of an eth item
+
+REASON OBSOLETED: Merged with test_24_n_validate_ipaddress_value
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4552097/
+
+TMS ID: litpcds_2064_tc23
+
+-----------------------------------------------------------------------
+TEST: test_25_p_validate_allowed_address_values
+
+DESCRIPTION: Verify a validation error is thrown when a not
+             permitted value is given to ipv6 property of an eth item
+
+REASON OBSOLETED: It was decided this test was no longer needed when it
+                  was discovered it had not been run since 2015 due to
+                  "physical" and "kgb-other" tags clashing
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4552097/
+
+TMS ID: litpcds_2064_tc25
+
+-----------------------------------------------------------------------
+TEST: test_26_n_validate_network_ipv6
+
+DESCRIPTION: Verify a validation error is thrown network_name
+             prop does not match a defined network
+
+REASON OBSOLETED: Test converted to AT "test_26_n_validate_network_ipv6.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4552097/
+
+TMS ID: litpcds_2064_tc26
+
+-----------------------------------------------------------------------
+TEST: test_27_n_validate_bridge_configured
+
+DESCRIPTION: Verify a validation error is creating a eth item
+             with invalid properties when bridge property is specified
+
+REASON OBSOLETED:  Test converted to AT
+                   "test_27_n_validate_bridge_configured.at" in
+                   networkapi
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4552097/
+
+TMS ID: litpcds_2064_tc27
+
+-----------------------------------------------------------------------
+TEST: test_28_p_check_output_flags
+
+DESCRIPTION: Verify tentative and dadfailed is not displayed
+             after a successful plan to create an eth item
+
+REASON OBSOLETED: Merged with
+                  test_01_n_create_update_valid_interface_non_mgmt_network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4552097/
+
+TMS ID: litpcds_2064_tc28
+
+-----------------------------------------------------------------------
+TEST: test_29_n_validate_unique_ipaddr_per_node
+
+DESCRIPTION: Verify that create plan fails when attempting to
+             make two eth items with identical ipv6 addresses
+
+REASON OBSOLETED: Test converted to AT
+                  "test_29_n_validate_unique_ipaddr_per_node.at" in
+                  network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4552097/
+
+TMS ID: litpcds_2064_tc29
+
+-----------------------------------------------------------------------
+TEST: test_30_n_create_update_valid_interface_non_mgmt_network
+
+DESCRIPTION: Verify creating eth items with IPv6 subnet values
+             that are different to other nodes on the network results
+             in an error being thrown when executing create plan
+
+REASON OBSOLETED: Test converted to AT
+                  "test_30_n_create_update_valid_interface_non_mgmt_network"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4552097/
+
+TMS ID: litpcds_2064_tc30
+
+-----------------------------------------------------------------------
+
+######################################################################
+STORY 2069
+######################################################################
+
+TEST: test_01_n_create_bond_without_slave
+
+DESCRIPTION: Verify creating a bond which has no slave result in an
+            error being thrown when creating a plan property values.
+
+REASON OBSOLETED: Converted to AT "test_01_n_create_bond_without_slave.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551000/
+
+TMS ID: litpcds_2069_tc01
+-----------------------------------------------------------------------
+TEST: test_02_p_create_bond_with_single_slave
+
+DESCRIPTION: Create a bond item which only has one slave
+
+REASON OBSOLETED: This test was merged with TC21
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551000/
+
+TMS ID:
+-----------------------------------------------------------------------
+TEST: test_04_n_create_bonded_interface_with_vlan
+
+DESCRIPTION: Verify creating bonded interface with vlan
+            is not supported
+
+REASON OBSOLETED: Converted to AT
+                  "test_04_n_create_bonded_interface_with_vlan.at" in
+                  network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551000/
+
+TMS ID: litpcds_2069_tc04
+-----------------------------------------------------------------------
+TEST: test_05_n_create_bonded_interface_with_bridge
+
+DESCRIPTION: Create a bonded interface with a bridge item type defined
+
+REASON OBSOLETED: This test is obsolete due to functionality delivered in
+                  LITPCDS-6629
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551000/
+
+TMS ID:
+-----------------------------------------------------------------------
+TEST: test_10_n_create_bonded_eth_invalid_master
+
+DESCRIPTION:  Verify eth item with invalid bond name results in an error
+
+REASON OBSOLETED: Converted to AT
+                  "test_10_n_create_bonded_eth_invalid_master.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551000/
+
+TMS ID: litpcds_2069_tc10
+-----------------------------------------------------------------------
+TEST: test_12_n_create_bond_non_unique_device_name
+
+DESCRIPTION: Verify two bond items with same device_name value
+             results in an error
+
+REASON OBSOLETED: Converted to AT
+                  "test_12_n_create_bond_non_unique_device_name.at" in
+                  network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551000/
+
+TMS ID: litpcds_2069_tc12
+-----------------------------------------------------------------------
+TEST: test_15_n_create_bond_without_ip
+
+DESCRIPTION: Verify creating a bond item with no ipaddress property results
+             in an error at create plan
+
+REASON OBSOLETED: Converted to AT "test_15_n_create_bond_without_ip.at" in
+                  network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551000/
+
+TMS ID: litpcds_2069_tc15
+-----------------------------------------------------------------------
+TEST: test_16_p_create_bond_with_ipaddress
+
+DESCRIPTION:  Create a bond with a valid ipaddress.
+
+REASON OBSOLETED: Made obsolete as TC was merged with TC18
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551000/
+
+TMS ID:
+-----------------------------------------------------------------------
+TEST: test_17_p_create_bond_with_ipv6address
+
+DESCRIPTION: Create a bond with a valid ip6address.
+
+REASON OBSOLETED: Made obsolete as TC was merged with TC18
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551000/
+
+TMS ID:
+-----------------------------------------------------------------------
+TEST: test_18_p_create_bond_with_ipaddress_and_ipv6address
+
+DESCRIPTION: Verify creating a bond item with IPv4 + IPv6
+             properties results in a successful plan
+
+REASON OBSOLETED: Merged with TC09
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551000/
+
+TMS ID: litpcds_2069_tc18
+-----------------------------------------------------------------------
+TEST: test_21_p_create_bond_update_all_props
+
+DESCRIPTION: Validate that updates are made to an applied
+             bond's properties
+
+REASON OBSOLETED: Merged with "test_09_p_create_bond_with_vlan"
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551000/
+
+TMS ID: litpcds_2069_tc21
+-----------------------------------------------------------------------
+TEST: test_23_n_validate_miimon_property
+
+DESCRIPTION: Test update of 'miimon' property as well as property validation
+
+REASON OBSOLETED: Obsoleted prior to refactoring project
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551000/
+
+TMS ID:
+-----------------------------------------------------------------------
+TEST: test_25_n_validate_eth_master_property
+
+DESCRIPTION: Validate that update of 'master' property on eth
+             results in an error
+
+REASON OBSOLETED: Converted to AT "test_25_n_validate_eth_master_property.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551000/
+
+TMS ID: litpcds_2069_tc25
+-----------------------------------------------------------------------
+TEST: test_30_n_remove_slave_and_leave_bond
+
+DESCRIPTION: Verify removing a bonds slaves results in a error
+             when creating a plan
+
+REASON OBSOLETED: Merged with TC29
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4551000/
+
+TMS ID: litpcds_2069_tc30
+-----------------------------------------------------------------------
+
+######################################################################
+STORY 225
+######################################################################
+
+TEST: test_02_p_create_bridge_over_multiple_interfaces
+
+DESCRIPTION: Create a bridge over multiple interfaces.
+
+REASON OBSOLETED: TC made obsolete due to outcome of LITPCDS-6463
+
+GERRIT LINK: Merged before refactor project
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_03_n_update_bridge_property
+
+DESCRIPTION: Creates a bridge over a interface and creates plan.
+             Change bridge interface or IP address or network,
+             expects error message
+
+REASON OBSOLETED: This test has been merged with TC01
+
+GERRIT LINK: Merged before refactor project
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_04_n_create_bridge_on_mgmt_network
+
+DESCRIPTION: Create a bridge with network tagged with litp_management=true,
+             create plan, expects a ValidationError error message
+
+REASON OBSOLETED: This test is obsolete due to functionality delivered in
+                  LITPCDS-6629
+
+GERRIT LINK: Merged before refactor project
+
+TMS ID:
+
+-----------------------------------------------------------------------
+TEST: test_05_n_add_bridge_with_no_interface
+
+DESCRIPTION: Verify creating a bridge which doesn't have associated
+             interface results in a failed plan
+
+REASON OBSOLETED: Test converted to "test_05_n_add_bridge_with_no_interface.at"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550926/
+
+TMS ID: litpcds_225_tc05
+
+-----------------------------------------------------------------------
+TEST: test_06_n_add_linked_interface_with_no_bridge
+
+DESCRIPTION: Verify creating an interface with non-existent bridge
+             property value results in an error when running create plan
+
+REASON OBSOLETED: Test converted to
+                  "test_06_n_add_linked_interface_with_no_bridge.at" in
+                  network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550926/
+
+TMS ID: litpcds_225_tc06
+
+-----------------------------------------------------------------------
+TEST: test_07_n_add_incorrectly_linked_interface
+
+DESCRIPTION: Add an interface which is linked to another interface instead
+             of a bridge
+
+REASON OBSOLETED: Converted to AT "test_07_n_add_incorrectly_linked_interface"
+                  in network
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550926/
+
+TMS ID: litpcds_225_tc07
+
+-----------------------------------------------------------------------
+TEST: test_08_n_invalid_bridge
+
+DESCRIPTION: Verify creating an item of type bridge with invalid
+             property and/or values results in a validation error either at
+             item creating or create plan.
+
+REASON OBSOLETED: Test converted to "test_08_n_invalid_bridge.at" in network
+                  and networkapi
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550926/
+
+TMS ID: litpcds_225_tc08
+
+-----------------------------------------------------------------------
+TEST: test_09_n_validate_stp
+
+DESCRIPTION: Verify Validation Error when setting stp property to invalid
+             value
+
+REASON OBSOLETED: Converted to AT "test_09_n_validate_stp.at" in networkapi
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550926/
+
+TMS ID: litpcds_225_tc09
+
+-----------------------------------------------------------------------
+TEST:  test_10_n_validate_forwarding_delay
+
+DESCRIPTION: Validate the forwarding_delay property(must be between 0-300)
+
+REASON OBSOLETED: Converted to AT "test_10_n_validate_forwarding_delay.at"
+                  in networkapi
+
+GERRIT LINK: https://gerrit.ericsson.se/#/c/4550926/
+
+TMS ID: litpcds_225_tc10
+
+-----------------------------------------------------------------------

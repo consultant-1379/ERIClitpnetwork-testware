@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="cdb-suite">
+	<test name="LITPNetworkCDBSuite" preserve-order="true">
+		<classes>
+			<class name="com.ericsson.nms.litp.taf.test.cases.LITPNetworkTestRunner">
+			  <methods>
+			    <include name="runERIClitpnetworkTests"/>
+                            <include name="parseNosetestsReports"/>
+			  </methods> 
+			</class>
+		</classes>
+	</test>
+</suite>
